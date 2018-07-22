@@ -126,10 +126,12 @@ render() {
          <ImageLinkForm onInputChange={this.onInputChange} onSubmit={this.onSubmit}/>
          <FaceRecogtion box={box} imageUrl={imageUrl}/>
       </div>
-    : (
-       route === 'signin'
+    : ( route === 'signin'
         ?  <SignIn loadUser={this.loadUser} onRoutechange={this.onRoutechange} />
-        : <Register loadUser={this.loadUser} onRoutechange={this.onRoutechange}/>
+        : ( route === 'signout'
+        	? <SignIn loadUser={this.loadUser} onRoutechange={this.onRoutechange} />
+        	: <Register loadUser={this.loadUser} onRoutechange={this.onRoutechange}/>
+        )
       )
     }
   </div>
