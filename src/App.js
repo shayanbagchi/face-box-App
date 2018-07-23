@@ -12,8 +12,8 @@ import Particles from 'react-particles-js';
 
 const particlesOptions = {
   particles: {
-    number:{ value:80, density:{ enable:true, value_area:800} }
-    size: { value: 10, random: true, anim: { enable: true, speed: 20, size_min: 0.1, sync: false } },
+    number:{ value:80, density:{ enable:true, value_area:800} },
+    size: { value: 10, random: true, anim: { enable: true, speed: 20, size_min: 0.1, sync: false } }
   }
 }
 
