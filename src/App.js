@@ -72,7 +72,7 @@ class App extends Component {
 
  onSubmit = () => {
   this.setState({imageUrl : this.state.input});
-   fetch('https://delicat-chaise-66409.herokuapp.com/imageurl',{
+   fetch('https://face-box-server.herokuapp.com//imageurl',{
         method: 'post',
         headers: {'Content-Type':'application/json'},
         body:JSON.stringify({
@@ -82,7 +82,7 @@ class App extends Component {
    .then(response => response.json())
   .then(response => {
     if(response){
-      fetch('https://delicat-chaise-66409.herokuapp.com/image',{
+      fetch('https://face-box-server.herokuapp.com//image',{
         method: 'put',
         headers: {'Content-Type':'application/json'},
         body:JSON.stringify({
